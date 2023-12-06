@@ -1,0 +1,7 @@
+.theme-light {
+	--link-unresolved-color: var(--text-normal);
+}
+
+.theme-dark {
+	--link-unresolved-color: var(--text-normal);
+}
