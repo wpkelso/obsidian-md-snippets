@@ -1,0 +1,8 @@
+.metadata-container {
+  font-size: 12pt;
+  font-family: var(--font-monospace-override);
+}
+
+.multi-select-pill-content {
+  font-family: var(--font-monospace-override);
+}
