@@ -10,3 +10,5 @@ A collection of Obsidian-md `css` snippets that I've created. Anything that is d
   - Metadata
 - Smooth Caret: Makes the editor caret move smoothly, like in VSCode (when the option is enabled) or in Microsoft Word. [Requires `Ninja Cursor`]
 - Rendered Indentation Guide Fix: Adjusts the indentation guide in the reader to better align with the circular numbered style numbered style in `Typomagical`. [Requires `Typomagical`]
+- Typography: customizable changes to typesetting and stylistic layout, placing an emphasis on clarity of text and form. Defaults are specified based on the fonts that I personally use in my vaults.
+
