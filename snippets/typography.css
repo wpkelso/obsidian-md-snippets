@@ -61,9 +61,48 @@ h6.embedded-note-title,
 .markdown-preview-view h6 {
     position: relative;
 	font-family: var(--typography-heading-alt);
-	font-size: 20pt;
 	letter-spacing: 0.5pt;
 	padding-bottom: 10px;
+}
+
+h2,
+h2.embedded-note-title,
+.cm-header .cm-header-2,
+.HyperMD-header-2.HyperMD-header .cm-header-2,
+.markdown-preview-view h2 {
+    font-size: 20pt;
+}
+
+h3,
+h3.embedded-note-title,
+.cm-header .cm-header-3,
+.HyperMD-header-3.HyperMD-header .cm-header-3,
+.markdown-preview-view h3 {
+    font-size: 18pt;
+}
+
+h4,
+h4.embedded-note-title,
+.cm-header .cm-header-4,
+.HyperMD-header-4.HyperMD-header .cm-header-4,
+.markdown-preview-view h4 {
+    font-size: 16pt;
+}
+
+h5,
+h5.embedded-note-title,
+.cm-header .cm-header-5,
+.HyperMD-header-5.HyperMD-header .cm-header-5,
+.markdown-preview-view h5 {
+    font-size: 14pt;
+}
+
+h6,
+h6.embedded-note-title,
+.cm-header .cm-header-6,
+.HyperMD-header-6.HyperMD-header .cm-header-6,
+.markdown-preview-view h6 {
+    font-size: 12pt;
 }
 
 /* center align titles to better differentiate them */
@@ -92,71 +131,29 @@ body:not(.align-title-left) {
 	line-height: 1.2;
 }
 
+/* Reader mode H2 mark */
+.markdown-rendered h2::before {
+    content: "";
+
+    position: absolute;
+    left: 0px;
+    bottom: 0.2ex;
+
+    width: 25%;
+    height: 1px;
+
+    background-color: black;
+}
+.markdown-rendered h2::after {
+    content: "..";
+
+    position: absolute;
+    left: 26%;
+    bottom: -0.6ex;
+}
+
 /* Reader mode H3 mark */
 .markdown-rendered h3::before {
-    content: "";
-
-    position: absolute;
-    left: 0px;
-    bottom: 0.2ex;
-
-    width: 5%;
-    height: 1px;
-
-    background-color: black;
-}
-.markdown-rendered h3::after {
-    content: "...";
-
-    position: absolute;
-    left: 6%;
-    bottom: -0.6ex;
-}
-
-/* Reader mode H4 mark */
-.markdown-rendered h4::before {
-    content: "";
-
-    position: absolute;
-    left: 0px;
-    bottom: 0.2ex;
-
-    width: 10%;
-    height: 1px;
-
-    background-color: black;
-}
-.markdown-rendered h4::after {
-    content: "....";
-
-    position: absolute;
-    left: 11%;
-    bottom: -0.6ex;
-}
-
-/* Reader mode H5 mark */
-.markdown-rendered h5::before {
-    content: "";
-
-    position: absolute;
-    left: 0px;
-    bottom: 0.2ex;
-
-    width: 15%;
-    height: 1px;
-
-    background-color: black;
-}
-.markdown-rendered h5::after {
-    content: ".....";
-
-    position: absolute;
-    left: 16%;
-    bottom: -0.6ex;
-}
-
-/* Reader mode H6 mark */
-.markdown-rendered h6::before {
     content: "";
 
     position: absolute;
@@ -168,11 +165,74 @@ body:not(.align-title-left) {
 
     background-color: black;
 }
+.markdown-rendered h3::after {
+    content: "...";
+
+    position: absolute;
+    left: 21%;
+    bottom: -0.6ex;
+}
+
+/* Reader mode H4 mark */
+.markdown-rendered h4::before {
+    content: "";
+
+    position: absolute;
+    left: 0px;
+    bottom: 0.2ex;
+
+    width: 15%;
+    height: 1px;
+
+    background-color: black;
+}
+.markdown-rendered h4::after {
+    content: "....";
+
+    position: absolute;
+    left: 16%;
+    bottom: -0.6ex;
+}
+
+/* Reader mode H5 mark */
+.markdown-rendered h5::before {
+    content: "";
+
+    position: absolute;
+    left: 0px;
+    bottom: 0.2ex;
+
+    width: 10%;
+    height: 1px;
+
+    background-color: black;
+}
+.markdown-rendered h5::after {
+    content: ".....";
+
+    position: absolute;
+    left: 11%;
+    bottom: -0.6ex;
+}
+
+/* Reader mode H6 mark */
+.markdown-rendered h6::before {
+    content: "";
+
+    position: absolute;
+    left: 0px;
+    bottom: 0.2ex;
+
+    width: 5%;
+    height: 1px;
+
+    background-color: black;
+}
 .markdown-rendered h6::after {
     content: "......";
 
     position: absolute;
-    left: 21%;
+    left: 6%;
     bottom: -0.6ex;
 }
 
@@ -225,7 +285,16 @@ a {
     text-decoration: none;
 }
 
-
+.cm-url:hover,
+.cm-hmd-internal-link:hover,
+.cm-s-obsidian span.cm-hmd-internal-link:hover,
+.cm-link:hover,
+.markdown-rendered .internal-link:hover,
+.markdown-preview-view .internal-link:hover {
+    border: 1px solid var(--link-color);
+    border-radius: 2px;
+    text-decoration: none;
+}
 
 /* TABLES */
 .markdown-rendered table {
