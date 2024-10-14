@@ -1,0 +1,4 @@
+.markdown-rendered.show-indentation-guide li > ul::before, 
+.markdown-rendered.show-indentation-guide li > ol::before {
+    left: -1.55em;
+}

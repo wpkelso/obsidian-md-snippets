@@ -1,8 +1,16 @@
+
+
 .metadata-container {
   font-size: 12pt;
-  font-family: var(--font-monospace-override);
+  font-family: var(--font-monospace-override) !important;
+}
+
+.metadata-container input {
+    font-size: 12pt;
+    font-family: var(--font-monospace-override) !important;
 }
 
 .multi-select-pill-content {
-  font-family: var(--font-monospace-override);
+  font-family: var(--font-monospace-override) !important;
 }
+
