@@ -1,12 +1,12 @@
 /* This snippet is meant to allow for easy modification of large parts of the typography within Obsidian.md, while maintaining a consistent style that has contextual meaning. */
 
 :root {
-    --typography-main: "Palatino Linotype", "Noto Serif CJK KR", -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif; /*This should have both a bold, and a true italic or oblique variant*/
+    --typography-main: "Libertinus Serif", sans-serif; /*This should have both a bold, and a true italic or oblique variant*/
     --typography-heading: "Rosario", "Jost* Semi", sans-serif;
-    --typography-heading-alt: "Libertinus Serif Display", "Noto Serif CJK KR", serif;
-    --typography-accent: "Rosario", "Palatino Linotype", serif;
+    --typography-heading-alt: "Rosario", serif;
+    --typography-accent: "Rosario", , serif;
     --typography-technical: "0xProto", monospace; /*Ideally this is a monospace font*/
-    --typography-link: "Noto Serif", "Palatino Linotype", serif; /*Ideally, this supports smallcap natively*/
+    --typography-link: "Libertinus Serif", serif; /*Ideally, this supports smallcap natively*/
 }
 
 body {
@@ -333,3 +333,18 @@ table {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* META & GUTTER MONO */
+.cm-gutter {
+    font-family: var(--typography-technical);
+}
+
+.metadata-container, .metadata-property, .metadata-container input {
+    font-size: 10pt;
+    font-family: var(--typography-technical);
+}
+
+.multi-select-pill span {
+  font-family: var(--typography-technical);
+}
+
